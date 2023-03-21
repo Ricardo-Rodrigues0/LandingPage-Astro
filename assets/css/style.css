@@ -2,9 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
-  
+
 *::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 *::-webkit-scrollbar-track {
@@ -12,8 +12,8 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  border: 3px solid #005d85;
+    border-radius: 20px;
+    border: 3px solid #005d85;
 }
 
 .main {
@@ -24,6 +24,8 @@ body {
 .home {
     height: 900px;
     background: linear-gradient(to bottom, #f5f5f5, #a2e3ff);
+    overflow: auto;
+    z-index: 9;
 }
 
 .home-text {
@@ -39,7 +41,7 @@ body {
     font-size: 30px;
     position: absolute;
     top: 50%;
-    line-height: 25px;
+    line-height: 32px;
 }
 
 .home-textbtn a {
@@ -77,7 +79,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 99;
 }
 
 .nav-text {
@@ -114,6 +116,8 @@ nav {
     background: linear-gradient(to bottom, #a2e3ff, #f5f5f5);
     display: flex;
     justify-content: center;
+    overflow: auto;
+    z-index: 8;
 }
 
 .features h2 {
@@ -130,6 +134,8 @@ nav {
     top: 175%;
     left: 45%;
     transform: translate(-40%, -75%);
+    width: 1000px;
+    height: 900px;
 }
 
 .card {
@@ -187,6 +193,8 @@ nav {
     background: linear-gradient(to bottom, #f5f5f5, #a2e3ff);
     display: flex;
     justify-content: center;
+    overflow: auto;
+    z-index: 7;
 }
 
 .features2 h2 {
@@ -225,6 +233,8 @@ nav {
     background: linear-gradient(to bottom, #a2e3ff, #f5f5f5);
     display: flex;
     justify-content: center;
+    overflow: auto;
+    z-index: 6;
 }
 
 .aboutus h2 {
@@ -262,6 +272,8 @@ nav {
     background: linear-gradient(to bottom, #f5f5f5, #a2e3ff);
     display: flex;
     justify-content: center;
+    overflow: auto;
+    z-index: 4;
 }
 
 .testimonials h2 {
@@ -342,6 +354,8 @@ nav {
     background: linear-gradient(to bottom, #a2e3ff, #f5f5f5);
     display: flex;
     justify-content: center;
+    overflow: auto;
+    z-index: 3;
 }
 
 .contact h2 {
@@ -365,16 +379,16 @@ nav {
     position: absolute;
     top: 485%;
     margin-left: 54%;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     display: block;
     margin-bottom: 10px;
     font-size: 1.2rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -384,9 +398,9 @@ nav {
     max-height: 200px;
     resize: vertical;
     background: rgba(240, 240, 240, 0.726);
-  }
-  
-  .contact-form button {
+}
+
+.contact-form button {
     color: #fff;
     background-color: #00aaff;
     border-color: #000000;
@@ -395,55 +409,180 @@ nav {
     font-size: 1.2rem;
     cursor: pointer;
     margin-left: 32%;
-  }
-  
-  .contact-form button:hover {
+}
+
+.contact-form button:hover {
     background-color: #00aaff;
     color: #000000;
-  }
+}
 
-  footer {
-      position: absolute;
-      background-color: #005d85;
-      color: #FFF;
-      width: 100%;
-      height: 60px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 15px;
-      text-align: center;
-      line-height: 50px;
-  }
-  
-  .footer-text {
-      position: absolute;
-      width: 100%;
-      top: 10%;
-  }
-  
-  .footer-custom {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-  }
-  
-  .footer-custom:hover {
-      color: #00aaff;
-      text-decoration: underline;
-  }
-  
-  .footer-right {
-      position: absolute;
-      margin: 20px;
-      top: -20%;
-      right: 0%;
-  }
-  
-  .footer-icon-custom {
-      color: rgb(255, 255, 255);
-      margin: 10px;
-      padding: 8px 8px;
-  }
-  
-  .footer-icon-custom:hover {
-      color: #00aaff;
-  }
-  
+footer {
+    position: absolute;
+    background-color: #005d85;
+    color: #FFF;
+    width: 100%;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.footer-text {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+
+.footer-custom {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.footer-custom:hover {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
+.footer-right {
+    position: absolute;
+    margin: 20px;
+    top: -20%;
+    right: 0%;
+}
+
+.footer-icon-custom {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 8px 8px;
+}
+
+.footer-icon-custom:hover {
+    color: #00aaff;
+}
+
+
+@media screen and (max-width: 1303px) {
+
+    nav {
+
+        width: 100%;
+        height: 15%;
+    }
+
+    .nav-text {
+        margin-right: 15%;
+    }
+
+    .home {
+        height: 650px;
+    }
+
+    .home-text {
+        margin-left: 5%;
+        top: 20%;
+    }
+
+    .home-text2 {
+        margin-left: 7%;
+        top: 50%;
+    }
+
+    .home-img {
+        width: 40%;
+    }
+
+    .home-textbtn a {
+        top: 88%;
+    }
+
+    .features {
+        height: 1050px;
+    }
+
+    .features-card {
+        top: 250%;
+        left: 42%;
+        width: 1000px;
+    }
+
+    .card {
+        width: 250px;
+        height: 380px;
+    }
+
+    .features2 {
+        height: 700px;
+    }
+
+    .features2 h2 {
+        margin: 0px;
+    }
+
+    .features2-img {
+        left: 10px;
+        top: 335%;
+    }
+
+    .features2-text {
+        margin-left: 45%;
+        top: 325%;
+    }
+
+    .features2-text2 {
+        margin-left: 50%;
+        top: 343%;
+        width: 28em;
+    }
+
+    .aboutus-img {
+        right: 10px;
+        top: 485%;
+    }
+
+    .aboutus-text {
+        left: 15px;
+        top: 450%;
+    }
+
+    .aboutus-text2 {
+        left: 15px;
+        top: 488%;
+    }
+
+    .testimonials-card {
+        width: 70%;
+        height: 90%;
+        top: 600%;
+    }
+
+    .testimonialsbnt {
+        margin-right: 75%;
+        top: 660%;
+    }
+
+    .testimonialsbnt2 {
+        margin-left: 75%;
+        top: 660%;
+    }
+
+    
+
+.contact-img {
+    left: 0px;
+    top: 760%;
+}
+
+
+
+.contact-form {
+    border: 1px #005d85 solid;
+    border-radius: 20px;
+    padding: 50px;
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 740%;
+    margin-left: 45%;
+}
+}
